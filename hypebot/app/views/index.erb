@@ -1,0 +1,23 @@
+<h1>Welcome to HypeMan!</h1>
+<h5>HypeMan is a Reddit bot designed to be the one-man (bot?) cheering squad you've always wanted</h5>
+<p>Enter your username in the field below, hit submit, sit back and watch as all of your posts, comments, and funny cat videos receive the attention and hype you deserve!</p>
+
+<div id="form-container">
+  <%= erb :"_errors" %>
+  <form id="username-form" action="/users" method="POST">
+    <input type="text" name="user[username]" placeholder="reddit username">
+    <input type="submit" value="Get hyped!">
+  </form>
+</div>
+
+<div id="list-div">
+<h5>Recent compliments, courtesy of HypeMan:</h5>
+<ul>
+<% Hype.recent(5).each do |hype| %>
+  <li class="recents-list"><%= hype.compliment %> -- user /u/<%= hype.user.username %></li>
+<% end %>
+</ul>
+
+
+</div>
+

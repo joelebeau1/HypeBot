@@ -1,0 +1,265 @@
+D, [2017-05-05T15:00:03.089033 #9076] DEBUG -- :   [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+D, [2017-05-05T15:00:03.116741 #9076] DEBUG -- :   [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 1]]
+D, [2017-05-05T15:00:03.117917 #9076] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 2]]
+D, [2017-05-05T15:00:03.118565 #9076] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 2]]
+D, [2017-05-05T15:00:03.119396 #9076] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 3]]
+D, [2017-05-05T15:00:03.120076 #9076] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 1]]
+D, [2017-05-05T15:00:03.120717 #9076] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 3]]
+D, [2017-05-05T15:00:03.125245 #9076] DEBUG -- :   [1m[35m (0.2ms)[0m  BEGIN
+D, [2017-05-05T15:00:03.721434 #9076] DEBUG -- :   [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+D, [2017-05-05T15:00:03.721883 #9076] DEBUG -- :   [1m[35m (0.2ms)[0m  BEGIN
+D, [2017-05-05T15:00:03.723948 #9076] DEBUG -- :   [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "hypes" ("compliment", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["compliment", "Love this!"], ["user_id", 2], ["created_at", "2017-05-05 20:00:03.722386"], ["updated_at", "2017-05-05 20:00:03.722386"]]
+D, [2017-05-05T15:00:03.725012 #9076] DEBUG -- :   [1m[35m (0.6ms)[0m  COMMIT
+D, [2017-05-05T15:00:04.096173 #9076] DEBUG -- :   [1m[36mHype Load (0.5ms)[0m  [1mSELECT  "hypes".* FROM "hypes" WHERE "hypes"."user_id" = $1  ORDER BY "hypes"."id" DESC LIMIT 1[0m  [["user_id", 2]]
+D, [2017-05-05T15:15:02.081169 #11050] DEBUG -- :   [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+D, [2017-05-05T15:15:02.108595 #11050] DEBUG -- :   [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 1]]
+D, [2017-05-05T15:15:02.109709 #11050] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 3]]
+D, [2017-05-05T15:15:02.110337 #11050] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 3]]
+D, [2017-05-05T15:15:02.111158 #11050] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 4]]
+D, [2017-05-05T15:15:02.111964 #11050] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 2]]
+D, [2017-05-05T15:15:02.112582 #11050] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 3]]
+D, [2017-05-05T15:15:02.116801 #11050] DEBUG -- :   [1m[35m (0.2ms)[0m  BEGIN
+D, [2017-05-05T15:15:02.663405 #11050] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+D, [2017-05-05T15:15:02.664060 #11050] DEBUG -- :   [1m[35m (0.3ms)[0m  BEGIN
+D, [2017-05-05T15:15:02.666761 #11050] DEBUG -- :   [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "hypes" ("compliment", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["compliment", "You're my    new hero!"], ["user_id", 4], ["created_at", "2017-05-05 20:15:02.664801"], ["updated_at", "2017-05-05 20:15:02.664801"]]
+D, [2017-05-05T15:15:02.668082 #11050] DEBUG -- :   [1m[35m (0.8ms)[0m  COMMIT
+D, [2017-05-05T15:15:02.668508 #11050] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+D, [2017-05-05T15:15:02.676483 #11050] DEBUG -- :   [1m[35mUser Exists (0.8ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."username" = 'brownmeetsworld' AND "users"."id" != 4) LIMIT 1
+D, [2017-05-05T15:15:03.492894 #11050] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+D, [2017-05-05T15:15:03.495172 #11050] DEBUG -- :   [1m[35mHype Load (0.5ms)[0m  SELECT  "hypes".* FROM "hypes" WHERE "hypes"."user_id" = $1  ORDER BY "hypes"."id" DESC LIMIT 1  [["user_id", 4]]
+D, [2017-05-05T15:30:02.429409 #12426] DEBUG -- :   [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+D, [2017-05-05T15:30:02.455314 #12426] DEBUG -- :   [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 1]]
+D, [2017-05-05T15:30:02.456382 #12426] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 3]]
+D, [2017-05-05T15:30:02.457032 #12426] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 3]]
+D, [2017-05-05T15:30:02.457873 #12426] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 4]]
+D, [2017-05-05T15:30:02.458745 #12426] DEBUG -- :   [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 2]]
+D, [2017-05-05T15:30:02.459372 #12426] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 3]]
+D, [2017-05-05T15:30:02.463677 #12426] DEBUG -- :   [1m[35m (0.2ms)[0m  BEGIN
+D, [2017-05-05T15:30:02.970704 #12426] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+D, [2017-05-05T15:30:02.971047 #12426] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2017-05-05T15:30:02.972998 #12426] DEBUG -- :   [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "hypes" ("compliment", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["compliment", "#blessed"], ["user_id", 4], ["created_at", "2017-05-05 20:30:02.971514"], ["updated_at", "2017-05-05 20:30:02.971514"]]
+D, [2017-05-05T15:30:02.973922 #12426] DEBUG -- :   [1m[35m (0.6ms)[0m  COMMIT
+D, [2017-05-05T15:30:02.974161 #12426] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2017-05-05T15:30:02.981676 #12426] DEBUG -- :   [1m[35mUser Exists (1.2ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."username" = 'brownmeetsworld' AND "users"."id" != 4) LIMIT 1
+D, [2017-05-05T15:30:03.811970 #12426] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+D, [2017-05-05T15:30:03.814361 #12426] DEBUG -- :   [1m[35mHype Load (0.5ms)[0m  SELECT  "hypes".* FROM "hypes" WHERE "hypes"."user_id" = $1  ORDER BY "hypes"."id" DESC LIMIT 1  [["user_id", 4]]
+D, [2017-05-05T15:45:02.901477 #14013] DEBUG -- :   [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+D, [2017-05-05T15:45:02.934535 #14013] DEBUG -- :   [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 1]]
+D, [2017-05-05T15:45:02.935637 #14013] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 4]]
+D, [2017-05-05T15:45:02.936286 #14013] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 4]]
+D, [2017-05-05T15:45:02.937115 #14013] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 6]]
+D, [2017-05-05T15:45:02.937950 #14013] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 2]]
+D, [2017-05-05T15:45:02.938558 #14013] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 4]]
+D, [2017-05-05T15:45:02.939362 #14013] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 3]]
+D, [2017-05-05T15:45:02.939889 #14013] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 4]]
+D, [2017-05-05T15:45:02.940656 #14013] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 5]]
+D, [2017-05-05T15:45:02.941196 #14013] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 4]]
+D, [2017-05-05T15:45:02.941745 #14013] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 6]]
+D, [2017-05-05T15:45:02.942267 #14013] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 3]]
+D, [2017-05-05T15:45:02.942798 #14013] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 3]]
+D, [2017-05-05T15:45:02.943330 #14013] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 5]]
+D, [2017-05-05T15:45:02.943846 #14013] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 6]]
+D, [2017-05-05T15:45:02.944363 #14013] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 5]]
+D, [2017-05-05T15:45:02.944893 #14013] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 2]]
+D, [2017-05-05T15:45:02.945415 #14013] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 5]]
+D, [2017-05-05T15:45:02.945936 #14013] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 2]]
+D, [2017-05-05T15:45:02.946459 #14013] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 3]]
+D, [2017-05-05T15:45:02.954517 #14013] DEBUG -- :   [1m[35m (0.4ms)[0m  BEGIN
+D, [2017-05-05T15:45:03.541602 #14013] DEBUG -- :   [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+D, [2017-05-05T15:45:03.542061 #14013] DEBUG -- :   [1m[35m (0.2ms)[0m  BEGIN
+D, [2017-05-05T15:45:03.544076 #14013] DEBUG -- :   [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "hypes" ("compliment", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["compliment", "WOW. #kindness"], ["user_id", 6], ["created_at", "2017-05-05 20:45:03.542517"], ["updated_at", "2017-05-05 20:45:03.542517"]]
+D, [2017-05-05T15:45:03.545061 #14013] DEBUG -- :   [1m[35m (0.6ms)[0m  COMMIT
+D, [2017-05-05T15:45:03.545403 #14013] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+D, [2017-05-05T15:45:03.553529 #14013] DEBUG -- :   [1m[35mUser Exists (1.2ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."username" = 'vrarepepe' AND "users"."id" != 6) LIMIT 1
+D, [2017-05-05T15:45:04.316750 #14013] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+D, [2017-05-05T15:45:04.318823 #14013] DEBUG -- :   [1m[35mHype Load (0.4ms)[0m  SELECT  "hypes".* FROM "hypes" WHERE "hypes"."user_id" = $1  ORDER BY "hypes"."id" DESC LIMIT 1  [["user_id", 6]]
+D, [2017-05-05T16:00:01.833815 #14847] DEBUG -- :   [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+D, [2017-05-05T16:00:01.860204 #14847] DEBUG -- :   [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 1]]
+D, [2017-05-05T16:00:01.861527 #14847] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 4]]
+D, [2017-05-05T16:00:01.862253 #14847] DEBUG -- :   [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 4]]
+D, [2017-05-05T16:00:01.863379 #14847] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 6]]
+D, [2017-05-05T16:00:01.864294 #14847] DEBUG -- :   [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 2]]
+D, [2017-05-05T16:00:01.865017 #14847] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 4]]
+D, [2017-05-05T16:00:01.865880 #14847] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 3]]
+D, [2017-05-05T16:00:01.866447 #14847] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 4]]
+D, [2017-05-05T16:00:01.867216 #14847] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 5]]
+D, [2017-05-05T16:00:01.867783 #14847] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 4]]
+D, [2017-05-05T16:00:01.868341 #14847] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 6]]
+D, [2017-05-05T16:00:01.868902 #14847] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 3]]
+D, [2017-05-05T16:00:01.869438 #14847] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 3]]
+D, [2017-05-05T16:00:01.869993 #14847] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 5]]
+D, [2017-05-05T16:00:01.870511 #14847] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 6]]
+D, [2017-05-05T16:00:01.871048 #14847] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 5]]
+D, [2017-05-05T16:00:01.871591 #14847] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 2]]
+D, [2017-05-05T16:00:01.872113 #14847] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 6]]
+D, [2017-05-05T16:00:01.872681 #14847] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 2]]
+D, [2017-05-05T16:00:01.873268 #14847] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 3]]
+D, [2017-05-05T16:00:01.880921 #14847] DEBUG -- :   [1m[35m (0.4ms)[0m  BEGIN
+D, [2017-05-05T16:00:02.420541 #14847] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+D, [2017-05-05T16:00:02.421186 #14847] DEBUG -- :   [1m[35m (0.3ms)[0m  BEGIN
+D, [2017-05-05T16:00:02.424002 #14847] DEBUG -- :   [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "hypes" ("compliment", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["compliment", "LOL too funny!"], ["user_id", 5], ["created_at", "2017-05-05 21:00:02.421937"], ["updated_at", "2017-05-05 21:00:02.421937"]]
+D, [2017-05-05T16:00:02.425095 #14847] DEBUG -- :   [1m[35m (0.6ms)[0m  COMMIT
+D, [2017-05-05T16:00:02.425337 #14847] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2017-05-05T16:00:02.433247 #14847] DEBUG -- :   [1m[35mUser Exists (0.8ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."username" = 'SnakeEatsApples' AND "users"."id" != 5) LIMIT 1
+D, [2017-05-05T16:00:03.187679 #14847] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+D, [2017-05-05T16:00:03.189989 #14847] DEBUG -- :   [1m[35mHype Load (0.5ms)[0m  SELECT  "hypes".* FROM "hypes" WHERE "hypes"."user_id" = $1  ORDER BY "hypes"."id" DESC LIMIT 1  [["user_id", 5]]
+D, [2017-05-05T16:15:02.530334 #15414] DEBUG -- :   [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+D, [2017-05-05T16:15:02.555880 #15414] DEBUG -- :   [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 1]]
+D, [2017-05-05T16:15:02.556929 #15414] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 4]]
+D, [2017-05-05T16:15:02.557568 #15414] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 4]]
+D, [2017-05-05T16:15:02.558427 #15414] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 6]]
+D, [2017-05-05T16:15:02.559277 #15414] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 2]]
+D, [2017-05-05T16:15:02.559917 #15414] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 4]]
+D, [2017-05-05T16:15:02.560705 #15414] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 3]]
+D, [2017-05-05T16:15:02.561248 #15414] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 4]]
+D, [2017-05-05T16:15:02.562014 #15414] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 5]]
+D, [2017-05-05T16:15:02.562565 #15414] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 4]]
+D, [2017-05-05T16:15:02.563127 #15414] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 6]]
+D, [2017-05-05T16:15:02.563666 #15414] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 3]]
+D, [2017-05-05T16:15:02.564201 #15414] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 3]]
+D, [2017-05-05T16:15:02.564721 #15414] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 5]]
+D, [2017-05-05T16:15:02.565265 #15414] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 6]]
+D, [2017-05-05T16:15:02.565788 #15414] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 5]]
+D, [2017-05-05T16:15:02.566336 #15414] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 2]]
+D, [2017-05-05T16:15:02.566869 #15414] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 5]]
+D, [2017-05-05T16:15:02.567394 #15414] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 2]]
+D, [2017-05-05T16:15:02.567936 #15414] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 3]]
+D, [2017-05-05T16:15:02.575382 #15414] DEBUG -- :   [1m[35m (0.4ms)[0m  BEGIN
+D, [2017-05-05T16:15:03.078380 #15414] DEBUG -- :   [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+D, [2017-05-05T16:15:03.079054 #15414] DEBUG -- :   [1m[35m (0.3ms)[0m  BEGIN
+D, [2017-05-05T16:15:03.081662 #15414] DEBUG -- :   [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "hypes" ("compliment", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["compliment", "You're my    new hero!"], ["user_id", 6], ["created_at", "2017-05-05 21:15:03.079836"], ["updated_at", "2017-05-05 21:15:03.079836"]]
+D, [2017-05-05T16:15:03.082563 #15414] DEBUG -- :   [1m[35m (0.5ms)[0m  COMMIT
+D, [2017-05-05T16:15:03.082846 #15414] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2017-05-05T16:15:03.090799 #15414] DEBUG -- :   [1m[35mUser Exists (1.2ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."username" = 'vrarepepe' AND "users"."id" != 6) LIMIT 1
+D, [2017-05-05T16:15:04.118141 #15414] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+D, [2017-05-05T16:15:04.120583 #15414] DEBUG -- :   [1m[35mHype Load (0.5ms)[0m  SELECT  "hypes".* FROM "hypes" WHERE "hypes"."user_id" = $1  ORDER BY "hypes"."id" DESC LIMIT 1  [["user_id", 6]]
+D, [2017-05-05T16:30:02.564498 #15978] DEBUG -- :   [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+D, [2017-05-05T16:30:02.593539 #15978] DEBUG -- :   [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 1]]
+D, [2017-05-05T16:30:02.594857 #15978] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 4]]
+D, [2017-05-05T16:30:02.595689 #15978] DEBUG -- :   [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 4]]
+D, [2017-05-05T16:30:02.596601 #15978] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 6]]
+D, [2017-05-05T16:30:02.597499 #15978] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 2]]
+D, [2017-05-05T16:30:02.598101 #15978] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 4]]
+D, [2017-05-05T16:30:02.598901 #15978] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 3]]
+D, [2017-05-05T16:30:02.599511 #15978] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 4]]
+D, [2017-05-05T16:30:02.600493 #15978] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 5]]
+D, [2017-05-05T16:30:02.601166 #15978] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 4]]
+D, [2017-05-05T16:30:02.601756 #15978] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 6]]
+D, [2017-05-05T16:30:02.602330 #15978] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 3]]
+D, [2017-05-05T16:30:02.602890 #15978] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 3]]
+D, [2017-05-05T16:30:02.603435 #15978] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 5]]
+D, [2017-05-05T16:30:02.603995 #15978] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 2]]
+D, [2017-05-05T16:30:02.604530 #15978] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 3]]
+D, [2017-05-05T16:30:02.608787 #15978] DEBUG -- :   [1m[35m (0.2ms)[0m  BEGIN
+D, [2017-05-05T16:30:03.168801 #15978] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+D, [2017-05-05T16:30:03.169212 #15978] DEBUG -- :   [1m[35m (0.2ms)[0m  BEGIN
+D, [2017-05-05T16:30:03.171142 #15978] DEBUG -- :   [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "hypes" ("compliment", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["compliment", "#blessed"], ["user_id", 5], ["created_at", "2017-05-05 21:30:03.169706"], ["updated_at", "2017-05-05 21:30:03.169706"]]
+D, [2017-05-05T16:30:03.172100 #15978] DEBUG -- :   [1m[35m (0.6ms)[0m  COMMIT
+D, [2017-05-05T16:30:03.172376 #15978] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2017-05-05T16:30:03.179484 #15978] DEBUG -- :   [1m[35mUser Exists (0.8ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."username" = 'SnakeEatsApples' AND "users"."id" != 5) LIMIT 1
+D, [2017-05-05T16:30:03.930752 #15978] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+D, [2017-05-05T16:30:03.933059 #15978] DEBUG -- :   [1m[35mHype Load (0.4ms)[0m  SELECT  "hypes".* FROM "hypes" WHERE "hypes"."user_id" = $1  ORDER BY "hypes"."id" DESC LIMIT 1  [["user_id", 5]]
+D, [2017-05-05T16:45:02.362003 #16477] DEBUG -- :   [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+D, [2017-05-05T16:45:02.388278 #16477] DEBUG -- :   [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 1]]
+D, [2017-05-05T16:45:02.389290 #16477] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 4]]
+D, [2017-05-05T16:45:02.389986 #16477] DEBUG -- :   [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 4]]
+D, [2017-05-05T16:45:02.390785 #16477] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 6]]
+D, [2017-05-05T16:45:02.391612 #16477] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 2]]
+D, [2017-05-05T16:45:02.392241 #16477] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 4]]
+D, [2017-05-05T16:45:02.393047 #16477] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 3]]
+D, [2017-05-05T16:45:02.393589 #16477] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 4]]
+D, [2017-05-05T16:45:02.394382 #16477] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 5]]
+D, [2017-05-05T16:45:02.394939 #16477] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 4]]
+D, [2017-05-05T16:45:02.399222 #16477] DEBUG -- :   [1m[35m (0.2ms)[0m  BEGIN
+D, [2017-05-05T16:45:02.912228 #16477] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+D, [2017-05-05T16:45:02.912578 #16477] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2017-05-05T16:45:02.914525 #16477] DEBUG -- :   [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "hypes" ("compliment", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["compliment", "Wow even Beyonce should be jealous of you"], ["user_id", 6], ["created_at", "2017-05-05 21:45:02.913053"], ["updated_at", "2017-05-05 21:45:02.913053"]]
+D, [2017-05-05T16:45:02.915445 #16477] DEBUG -- :   [1m[35m (0.6ms)[0m  COMMIT
+D, [2017-05-05T16:45:02.915749 #16477] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+D, [2017-05-05T16:45:02.923359 #16477] DEBUG -- :   [1m[35mUser Exists (1.2ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."username" = 'vrarepepe' AND "users"."id" != 6) LIMIT 1
+D, [2017-05-05T16:45:03.670234 #16477] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+D, [2017-05-05T16:45:03.672304 #16477] DEBUG -- :   [1m[35mHype Load (0.4ms)[0m  SELECT  "hypes".* FROM "hypes" WHERE "hypes"."user_id" = $1  ORDER BY "hypes"."id" DESC LIMIT 1  [["user_id", 6]]
+D, [2017-05-05T17:00:01.992588 #16974] DEBUG -- :   [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+D, [2017-05-05T17:00:02.018359 #16974] DEBUG -- :   [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 1]]
+D, [2017-05-05T17:00:02.019421 #16974] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 4]]
+D, [2017-05-05T17:00:02.020092 #16974] DEBUG -- :   [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 4]]
+D, [2017-05-05T17:00:02.020902 #16974] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 6]]
+D, [2017-05-05T17:00:02.021527 #16974] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 1]]
+D, [2017-05-05T17:00:02.022126 #16974] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 6]]
+D, [2017-05-05T17:00:02.022924 #16974] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 2]]
+D, [2017-05-05T17:00:02.023449 #16974] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 6]]
+D, [2017-05-05T17:00:02.024283 #16974] DEBUG -- :   [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 3]]
+D, [2017-05-05T17:00:02.024824 #16974] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 6]]
+D, [2017-05-05T17:00:02.025618 #16974] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 5]]
+D, [2017-05-05T17:00:02.026167 #16974] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 6]]
+D, [2017-05-05T17:00:02.026717 #16974] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 4]]
+D, [2017-05-05T17:00:02.027238 #16974] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 3]]
+D, [2017-05-05T17:00:02.027790 #16974] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 3]]
+D, [2017-05-05T17:00:02.028316 #16974] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 5]]
+D, [2017-05-05T17:00:02.028856 #16974] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 2]]
+D, [2017-05-05T17:00:02.029400 #16974] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 3]]
+D, [2017-05-05T17:00:02.033519 #16974] DEBUG -- :   [1m[35m (0.2ms)[0m  BEGIN
+D, [2017-05-05T17:00:02.544042 #16974] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+D, [2017-05-05T17:00:02.544687 #16974] DEBUG -- :   [1m[35m (0.3ms)[0m  BEGIN
+D, [2017-05-05T17:00:02.547370 #16974] DEBUG -- :   [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "hypes" ("compliment", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["compliment", "WOW. #kindness"], ["user_id", 4], ["created_at", "2017-05-05 22:00:02.545472"], ["updated_at", "2017-05-05 22:00:02.545472"]]
+D, [2017-05-05T17:00:02.548309 #16974] DEBUG -- :   [1m[35m (0.6ms)[0m  COMMIT
+D, [2017-05-05T17:00:02.548549 #16974] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2017-05-05T17:00:02.556351 #16974] DEBUG -- :   [1m[35mUser Exists (1.2ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."username" = 'brownmeetsworld' AND "users"."id" != 4) LIMIT 1
+D, [2017-05-05T17:00:03.352103 #16974] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+D, [2017-05-05T17:00:03.354569 #16974] DEBUG -- :   [1m[35mHype Load (0.4ms)[0m  SELECT  "hypes".* FROM "hypes" WHERE "hypes"."user_id" = $1  ORDER BY "hypes"."id" DESC LIMIT 1  [["user_id", 4]]
+D, [2017-05-05T17:15:02.379431 #17471] DEBUG -- :   [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+D, [2017-05-05T17:15:02.405279 #17471] DEBUG -- :   [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 1]]
+D, [2017-05-05T17:15:02.406377 #17471] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 4]]
+D, [2017-05-05T17:15:02.407019 #17471] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 4]]
+D, [2017-05-05T17:15:02.407867 #17471] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 6]]
+D, [2017-05-05T17:15:02.408705 #17471] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 2]]
+D, [2017-05-05T17:15:02.409370 #17471] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 4]]
+D, [2017-05-05T17:15:02.410169 #17471] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 3]]
+D, [2017-05-05T17:15:02.410754 #17471] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 4]]
+D, [2017-05-05T17:15:02.411579 #17471] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 5]]
+D, [2017-05-05T17:15:02.412141 #17471] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 4]]
+D, [2017-05-05T17:15:02.412695 #17471] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 6]]
+D, [2017-05-05T17:15:02.413230 #17471] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 3]]
+D, [2017-05-05T17:15:02.413778 #17471] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 3]]
+D, [2017-05-05T17:15:02.414298 #17471] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 5]]
+D, [2017-05-05T17:15:02.414863 #17471] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 2]]
+D, [2017-05-05T17:15:02.415392 #17471] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 3]]
+D, [2017-05-05T17:15:02.419525 #17471] DEBUG -- :   [1m[35m (0.2ms)[0m  BEGIN
+D, [2017-05-05T17:15:02.928688 #17471] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+D, [2017-05-05T17:15:02.929099 #17471] DEBUG -- :   [1m[35m (0.2ms)[0m  BEGIN
+D, [2017-05-05T17:15:02.930988 #17471] DEBUG -- :   [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "hypes" ("compliment", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["compliment", "WOW. #kindness"], ["user_id", 5], ["created_at", "2017-05-05 22:15:02.929543"], ["updated_at", "2017-05-05 22:15:02.929543"]]
+D, [2017-05-05T17:15:02.931937 #17471] DEBUG -- :   [1m[35m (0.6ms)[0m  COMMIT
+D, [2017-05-05T17:15:02.932254 #17471] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2017-05-05T17:15:02.939476 #17471] DEBUG -- :   [1m[35mUser Exists (1.2ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."username" = 'SnakeEatsApples' AND "users"."id" != 5) LIMIT 1
+D, [2017-05-05T17:15:03.738669 #17471] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+D, [2017-05-05T17:15:03.740975 #17471] DEBUG -- :   [1m[35mHype Load (0.4ms)[0m  SELECT  "hypes".* FROM "hypes" WHERE "hypes"."user_id" = $1  ORDER BY "hypes"."id" DESC LIMIT 1  [["user_id", 5]]
+D, [2017-05-05T17:30:02.629333 #17968] DEBUG -- :   [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+D, [2017-05-05T17:30:02.655131 #17968] DEBUG -- :   [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 1]]
+D, [2017-05-05T17:30:02.656207 #17968] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 4]]
+D, [2017-05-05T17:30:02.656809 #17968] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 4]]
+D, [2017-05-05T17:30:02.657648 #17968] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 6]]
+D, [2017-05-05T17:30:02.658500 #17968] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 2]]
+D, [2017-05-05T17:30:02.659193 #17968] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 4]]
+D, [2017-05-05T17:30:02.660049 #17968] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 3]]
+D, [2017-05-05T17:30:02.660635 #17968] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 4]]
+D, [2017-05-05T17:30:02.661604 #17968] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 5]]
+D, [2017-05-05T17:30:02.662177 #17968] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 4]]
+D, [2017-05-05T17:30:02.662736 #17968] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 6]]
+D, [2017-05-05T17:30:02.663294 #17968] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 3]]
+D, [2017-05-05T17:30:02.663844 #17968] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 3]]
+D, [2017-05-05T17:30:02.664380 #17968] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 5]]
+D, [2017-05-05T17:30:02.664939 #17968] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 6]]
+D, [2017-05-05T17:30:02.665463 #17968] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 5]]
+D, [2017-05-05T17:30:02.666011 #17968] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 2]]
+D, [2017-05-05T17:30:02.666551 #17968] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 6]]
+D, [2017-05-05T17:30:02.667081 #17968] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1  [["user_id", 3]]
+D, [2017-05-05T17:30:02.667627 #17968] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "hypes" WHERE "hypes"."user_id" = $1[0m  [["user_id", 2]]
+D, [2017-05-05T17:30:02.674993 #17968] DEBUG -- :   [1m[35m (0.3ms)[0m  BEGIN
+D, [2017-05-05T17:30:03.183696 #17968] DEBUG -- :   [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+D, [2017-05-05T17:30:03.184124 #17968] DEBUG -- :   [1m[35m (0.2ms)[0m  BEGIN
+D, [2017-05-05T17:30:03.186126 #17968] DEBUG -- :   [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "hypes" ("compliment", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["compliment", "Love this!"], ["user_id", 3], ["created_at", "2017-05-05 22:30:03.184592"], ["updated_at", "2017-05-05 22:30:03.184592"]]
+D, [2017-05-05T17:30:03.187198 #17968] DEBUG -- :   [1m[35m (0.7ms)[0m  COMMIT
+D, [2017-05-05T17:30:03.187553 #17968] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+D, [2017-05-05T17:30:03.195794 #17968] DEBUG -- :   [1m[35mUser Exists (1.2ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."username" = 'IHaeTypos' AND "users"."id" != 3) LIMIT 1
+D, [2017-05-05T17:30:03.657848 #17968] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+D, [2017-05-05T17:30:03.659923 #17968] DEBUG -- :   [1m[35mHype Load (0.4ms)[0m  SELECT  "hypes".* FROM "hypes" WHERE "hypes"."user_id" = $1  ORDER BY "hypes"."id" DESC LIMIT 1  [["user_id", 3]]
