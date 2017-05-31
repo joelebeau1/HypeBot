@@ -1,29 +1,6 @@
-### Build Something Beautiful & Meaningful
+### HypeBot: A Reddit bot with a flair for kindness
 
-#### Learning Competencies
-  * Building a web application from scratch
-  * Managing the development process
+HypeBot is a Reddit bot programmed to store a given 'roster' of Reddit users and, on a timed interval schedule, cycle through each user on it's 'hype list' and select a random post or comment made by that user to 'hype' by leaving a random compliment or positive comment intended to hype up that user's Reddit presence. Redditors can subscribe to HypeBot by visiting the root webpage and submitting their Reddit username, which is then stored in HypeBot's user roster.
 
-#### Summary
-You should work by yourself.
-
-You've learned a lot in phase 2: Sinatra, Active Record, JavaScript, Agile, and much more. Each of these tools is useful in its own right, but together, they give you something much more powerful — the ability to build a web application from nothing.
-
-For this challenge, your assignment is to build something. It can be as practical or trivial as you would want, as long as it is a 100% functional, full-stack web application.
-
-You can build anything you want, provided that it meets the following requirements:
-
-- It has a database
-- Construct a controller that has at least 1 RESTful resource
-- It uses an API (what does this mean?! explore!)
-- It is styled
-- It utilizes JavaScript
-- It is deployed to Heroku
-
-Once you've come up with an idea, get one of your teachers to approve it.
-
-### Resources
-- [List of Public API's](https://www.publicapis.com/)
-- [Mashape - List of API's](https://www.mashape.com/)
-- [Programmable Web](http://www.programmableweb.com/)
-- [Postman - REST Client](https://chrome.google.com/webstore/detail/postman-rest-client-packa/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
+### Tools & Tech
+HypeBot is built using Redd, a Reddit API wrapper for Ruby on Rails, PostgreSQL, HTML5/CSS3 and JavaScript/AJAX.
